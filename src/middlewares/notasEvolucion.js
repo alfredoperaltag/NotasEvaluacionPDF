@@ -106,10 +106,10 @@ const generatePdf = async (req, res, next) => {
             .moveTo(407, 132.5)
             .lineTo(451.5, 132.5)
             .stroke()
-        if (sexo.includes('1')) {
+        if (sexo === '1') {
             doc
                 .text('X', 512.5, 125.5)
-        } else if (sexo.includes('0')) {
+        } else if (sexo === '0') {
             doc
                 .text('X', 547.5, 125.5)
         }
@@ -577,7 +577,10 @@ const generatePdf = async (req, res, next) => {
 
     } catch (error) {
         console.log(error)
-        res.status(500).send({ error: "No se pudo realizar el pdf" })
+        res.status(500).send({
+            error: "No se pudo realizar el pdf",
+            errorType: error.toString()
+        })
         //res.status(500).send({ error: error.toString() })
     }
 }

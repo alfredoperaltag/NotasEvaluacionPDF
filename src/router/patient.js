@@ -4,7 +4,8 @@ const router = new express.Router()
 
 router.post('/patient', notasEvolucion, async (req, res, next) => {
     try {
-        res.send({})
+        res.send({ pdf: "OK" })
+        res.redirect('')
     } catch (error) {
         res.status(500).send(error)
     }
