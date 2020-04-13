@@ -4,7 +4,7 @@ const fs = require('fs');
 const generatePdf = async (req, res, next) => {
     try {
         const doc = new PDFDocument();
-        const writeStream = await doc.pipe(fs.createWriteStream(process.env.PDF_URL));
+        const writeStream = await doc.pipe(fs.createWriteStream('src/pdf/Nota de evolución.pdf'));
 
         const numeroExpediente = req.body.numeroExpediente
         const apellidoPaterno = req.body.apellidoPaterno
