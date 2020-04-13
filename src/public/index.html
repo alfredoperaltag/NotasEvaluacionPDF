@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Notas de Evolución</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <form autocomplete="off">
+                    <div class="card">
+                        <h6 class="card-header">
+                            A.- IDENTIFICACION
+                        </h6>
+                        <div class="card-body">
+                            <div class="form-group">
+                                Numero de expediente: <input class="form-control" type="text" id="numeroExpediente">
+                            </div>
+                            <div class="form-group">
+                                Apellido Paterno: <input class=" form-control" type="text" id="apellidoPaterno">
+                            </div>
+                            <div class="form-group">
+                                Apellido Materno: <input class="form-control" type="text" id="apellidoMaterno">
+                            </div>
+                            <div class="form-group">
+                                Nombre: <input class="form-control" type="text" id="nombre">
+                            </div>
+                            <div class="form-group">
+                                Edad: <input class="form-control" type="number" id="edad">
+                            </div>
+                            <div class="form-group">
+                                <label>Sexo:</label>
+                                <div class="form-check form-check-inline">
+                                    <label class="form-check-label" for="m">M</label><input class="form-check-input"
+                                        type="radio" name="sexo" value="1" checked>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <label class="form-check-label" for="f">F</label><input class="form-check-input"
+                                        type="radio" name="sexo" value="0">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                Fecha de Nacimiento: <input class="form-control" type="date" id="fechaNacimiento">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h6 class="card-header">
+                            B.- SIGNOS VITALES, DIAGNOSTICO, PRESCRIPCION Y EVOLUCION.
+                        </h6>
+                        <div class="card-body">
+                            <div class="form-group">
+                                Peso Actual: <input class="form-control" type="number" id="pesoActual">
+                            </div>
+                            <div class="form-group">
+                                Estatura: <input class="form-control" type="number" id="estatura">
+                            </div>
+                            <div class="form-group">
+                                Frecuencia Cardiaca: <input class="form-control" type="number" id="frecuenciaCardiaca">
+                            </div>
+                            <div class="form-group">
+                                Frecuencia Respiratoria: <input class="form-control" type="number"
+                                    id="frecuenciaRespiratoria">
+                            </div>
+                            <div class="form-group">
+                                Sistolica: <input class="form-control" type="text" id="sistolica">
+                            </div>
+                            <div class="form-group">
+                                Diastolica: <input class="form-control" type="text" id="diastolica">
+                            </div>
+                            <div class="form-group">
+                                Temperatura: <input class="form-control" type="number" id="temperatura">
+                            </div>
+                            <div class="form-group">
+                                Pulso: <input class="form-control" type="number" id="pulso">
+                            </div>
+                            <div class="form-group">
+                                Enfermera/TAPS: <input class="form-control" type="text" id="enfermeraTaps">
+                            </div>
+                            <div class="form-group">
+                                Cedula Profesional: <input class="form-control" type="text" id="cedulaProfesional">
+                            </div>
+                            <div class="form-group">
+                                Resumen Interrogatorio: <textarea class="form-control" id="resumenInterrogatorio"
+                                    cols="30" rows="10" maxlength="1311"></textarea>
+                            </div>
+                            <div class="form-group">
+                                Exploración Fisica: <textarea class="form-control" id="exploracionFisica" cols="30"
+                                    rows="10" maxlength="1499"></textarea>
+                            </div>
+                            <div class="form-group">
+                                resultado Servicios Auxiliares Diagnostico: <textarea class="form-control"
+                                    id="resultadoServiciosAuxiliaresDiagnostico" cols="30" rows="10"
+                                    maxlength="805"></textarea>
+                            </div>
+                            <div class="form-group">
+                                diagnostico: <textarea class="form-control" id="diagnostico" cols="30" rows="10"
+                                    maxlength="500"></textarea>
+                            </div>
+                            <div class="form-group">
+                                Plan Estudio Tratamiento: <textarea class="form-control" id="planEstudioTratamiento"
+                                    cols="30" rows="10" maxlength="824"></textarea>
+                            </div>
+                            <div class="form-group">
+                                Pronostico: <textarea class="form-control" id="pronostico" cols="30" rows="10"
+                                    maxlength="675"></textarea>
+                            </div>
+                            <div class="form-group">
+                                Nombre del Medico: <input class="form-control" type="text" id="nombreMedico">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col text-center">
+                <button class="btn btn-primary" onclick="generar()">Generar Nota de evolución</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="recibirPdf.js"></script>
+</body>
+
+</html>
