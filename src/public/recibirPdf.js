@@ -93,7 +93,7 @@ const generar = () => {
             if (data.error) {
                 console.log(data)
             } else {
-                window.open('pdf/Nota de evolución.pdf', '_blank')
+                window.open('pdf/nota.pdf', '_blank')
             }
         })
     })
