@@ -172,7 +172,7 @@ const generatePdf = async (req, res, next) => {
             .stroke()
 
         doc
-            .text(fechaNacimiento.getDate() + 1, 162, 156)
+            .text(fechaNacimiento.getUTCDate(), 162, 156)
             .text('DÍA', 160, 169)
             .text(fechaNacimiento.getMonth() + 1, 204, 156)
             .text('MES', 198, 169)
@@ -243,7 +243,10 @@ const generatePdf = async (req, res, next) => {
             .text('AÑO', 152, 219)
             //hora
             .text('HORA', 196.5, 219)
-            .text(fecha.getHours() + ":" + fecha.getMinutes(), 200, 232)
+            .text(fecha.toLocaleTimeString('en-MX', {
+                hour: '2-digit',
+                minute: '2-digit'
+            }), 192, 232)
             .stroke()
 
             //linea horizontal de abajo 2 dia, mes, año, hora

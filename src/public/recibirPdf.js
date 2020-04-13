@@ -16,7 +16,7 @@ const generar = () => {
         sexo,
         //fechaNacimiento: new Date(1997, 07, 10),
         fechaNacimiento: document.getElementById("fechaNacimiento").value,
-        fecha: new Date(),
+        fecha: new Date().toJSON(),
         pesoActual: document.getElementById("pesoActual").value,
         estatura: document.getElementById("estatura").value,
         frecuenciaCardiaca: document.getElementById("frecuenciaCardiaca").value,
