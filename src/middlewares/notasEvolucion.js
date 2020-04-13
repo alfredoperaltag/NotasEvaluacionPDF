@@ -243,7 +243,7 @@ const generatePdf = async (req, res, next) => {
             .text('AÑO', 152, 219)
             //hora
             .text('HORA', 196.5, 219)
-            .text(fecha.toLocaleTimeString('en-MX', {
+            .text(fecha.toLocaleTimeString('es-MX', {
                 hour: '2-digit',
                 minute: '2-digit'
             }), 192, 232)
